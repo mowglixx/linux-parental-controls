@@ -1,0 +1,16 @@
+[Unit]
+Description=Timer for user access restriction
+
+[Timer]
+# Run on system boot to cover midnight boots
+OnBootSec=1min
+
+# Run specifically at 22:00 and 06:30 daily
+OnCalendar=*-*-* 22:00:00
+OnCalendar=*-*-* 06:30:00
+
+# Catch up if the system was powered off when a timer event fired
+Persistent=true
+
+[Install]
+WantedBy=timers.target

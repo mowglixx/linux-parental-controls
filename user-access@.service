@@ -1,0 +1,7 @@
+[Unit]
+Description=Enforce access schedule for user
+After=multi-user.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/manage-user.sh %i
