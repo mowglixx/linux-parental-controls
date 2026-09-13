@@ -13,8 +13,8 @@ echo "Installing user access restriction components..."
 install -m 0755 manage-user.sh /usr/local/bin/manage-user.sh
 
 # 2. Install systemd service and timer unit templates
-install -m 0644 user-access.service /etc/systemd/system/user-access@.service
-install -m 0644 user-access.timer /etc/systemd/system/user-access@.timer
+install -m 0644 user-access@.service /etc/systemd/system/user-access@.service
+install -m 0644 user-access@.timer /etc/systemd/system/user-access@.timer
 
 # 3. Reload systemd daemon to pick up the new units
 systemctl daemon-reload
